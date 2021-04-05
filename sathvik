@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Load imgs dynamically</title>
+  </head>
+  <body>
+    <h1>Our <span class="purple">Store</span></h1>
+    <div class="buttons">
+      <button class="cake-btn">Cakes</button>
+      <button class="cup-cake">Cup cakes</button>
+      <button class="sweet">Sweets</button>
+    </div>
+
+    <div class="cake-c">
+      <img src="" alt="" class="cake1 cake" />
+      <img src="" alt="" class="cake2 cake" />
+      <img src="" alt="" class="cake3 cake" />
+      <img src="" alt="" class="cake4 cake" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+</div>
+ </head>
+ <body style="background-color:lightgreen">
+ <style type="text/css">
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee;
+}
+
+.purple {
+  color: purple;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+button {
+  padding: 8px 20px;
+  margin: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cake-c {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+Script:
+const cakeEl = document.querySelector('.cake-btn');
+const cake1El = document.querySelector('.cake1');
+const cake2El = document.querySelector('.cake2');
+const cake3El = document.querySelector('.cake3');
+const cake4El = document.querySelector('.cake4');
+const cakeImgEl = document.querySelectorAll('.cake');
+
+const cupCakeBtn = document.querySelector('.cup-cake');
+const sweetBtn = document.querySelector('.sweet');
+
+cakeEl.addEventListener('click', () => {
+  cakes();
+});
+
+cupCakeBtn.addEventListener('click', () => {
+  cupcakes();
+});
+
+sweetBtn.addEventListener('click', () => {
+  sweets();
+});
+
+let cakesImg = ['cake1.jpg', 'cake2.jpg', 'cake3.jpg', 'cake4.jpg'];
+function cakes() {
+  cake1El.src = cakesImg[0];
+  cake2El.src = cakesImg[1];
+  cake3El.src = cakesImg[2];
+  cake4El.src = cakesImg[3];
+}
+
+cakes();
+
+let cupCakeImg = [
+  'cupcake1.jpg',
+  'cupcake2.jpg',
+  'cupcake3.jpg',
+  'cupcake4.jpg',
+];
+function cupcakes() {
+  cake1El.src = cupCakeImg[0];
+  cake2El.src = cupCakeImg[1];
+  cake3El.src = cupCakeImg[2];
+  cake4El.src = cupCakeImg[3];
+}
+
+let sweetImg = ['sweet1.jpg', 'sweet2.jpg', 'sweet3.jpg', 'sweet4.jpg'];
+function sweets() {
+  cake1El.src = sweetImg[0];
+  cake2El.src = sweetImg[1];
+  cake3El.src = sweetImg[2];
+  cake4El.src = sweetImg[3];
+}
+</style>
